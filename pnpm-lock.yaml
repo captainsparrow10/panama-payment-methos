@@ -14,7 +14,7 @@ importers:
 
   packages/cmf:
     dependencies:
-      '@panama-payments/core':
+      '@devhubpty/core':
         specifier: workspace:*
         version: link:../core
       axios:
@@ -42,7 +42,7 @@ importers:
 
   packages/cybersource:
     dependencies:
-      '@panama-payments/core':
+      '@devhubpty/core':
         specifier: workspace:*
         version: link:../core
       cybersource-rest-client:
@@ -64,7 +64,7 @@ importers:
 
   packages/yappy:
     dependencies:
-      '@panama-payments/core':
+      '@devhubpty/core':
         specifier: workspace:*
         version: link:../core
       axios:

@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/components/YappyPhoneInput
+ * @module @devhubpty/yappy/react/components/YappyPhoneInput
  * @description Accessible phone input for entering a Panamanian Yappy phone number.
  *
  * Validates Panamanian mobile numbers: 8 digits starting with 6 or 7 (e.g., 60800011).
@@ -23,7 +23,7 @@ import React, { useState } from 'react';
  *
  * @example
  * ```ts
- * import { validateYappyPhone } from '@panama-payments/yappy/react';
+ * import { validateYappyPhone } from '@devhubpty/yappy/react';
  *
  * validateYappyPhone('60800011'); // true
  * validateYappyPhone('20800011'); // false -- doesn't start with 6 or 7
@@ -76,7 +76,7 @@ export interface YappyPhoneInputProps {
  *
  * @example
  * ```tsx
- * import { YappyPhoneInput } from '@panama-payments/yappy/react';
+ * import { YappyPhoneInput } from '@devhubpty/yappy/react';
  *
  * function PaymentForm() {
  *   return (

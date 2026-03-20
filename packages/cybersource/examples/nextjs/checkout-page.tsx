@@ -18,7 +18,7 @@ import {
   type EnrollmentResponse,
   type ValidateAuthResponse,
   type PaymentResponse,
-} from '@panama-payments/cybersource/react';
+} from '@devhubpty/cybersource/react';
 
 async function apiFetch<T>(url: string, body: unknown): Promise<T> {
   const res = await fetch(url, {

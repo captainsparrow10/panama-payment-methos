@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/hooks/useYappyWebComponent
+ * @module @devhubpty/yappy/react/hooks/useYappyWebComponent
  * @description React hook for integrating the OFFICIAL Yappy `<btn-yappy>` web component CDN.
  *
  * This is the recommended integration path per Banco General's documentation.
@@ -13,7 +13,7 @@
  *
  * @example
  * ```tsx
- * import { useYappyWebComponent } from '@panama-payments/yappy/react';
+ * import { useYappyWebComponent } from '@devhubpty/yappy/react';
  *
  * function CheckoutPage() {
  *   const { btnRef, isOnline, isLoading } = useYappyWebComponent({
@@ -165,7 +165,7 @@ export interface UseYappyWebComponentReturn {
  *
  * @example
  * ```tsx
- * import { useYappyWebComponent } from '@panama-payments/yappy/react';
+ * import { useYappyWebComponent } from '@devhubpty/yappy/react';
  *
  * function CheckoutPage() {
  *   const { btnRef, isOnline, isLoading, isCdnLoaded } = useYappyWebComponent({

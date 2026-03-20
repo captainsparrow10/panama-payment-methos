@@ -10,7 +10,7 @@
  *
  * @example
  * ```ts
- * import { InMemoryThreeDSAuthCache } from '@panama-payments/cybersource/server';
+ * import { InMemoryThreeDSAuthCache } from '@devhubpty/cybersource/server';
  *
  * const cache = new InMemoryThreeDSAuthCache();
  *
@@ -49,7 +49,7 @@ const DEFAULT_TTL_MS = 5 * 60 * 1000;
  *
  * @example
  * ```ts
- * import { InMemoryThreeDSAuthCache } from '@panama-payments/cybersource/server';
+ * import { InMemoryThreeDSAuthCache } from '@devhubpty/cybersource/server';
  *
  * const cache = new InMemoryThreeDSAuthCache(5 * 60 * 1000);
  *

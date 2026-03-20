@@ -1,6 +1,6 @@
 # Environment Variables
 
-Complete reference for all environment variables used by `@panama-payments/yappy`.
+Complete reference for all environment variables used by `@devhubpty/yappy`.
 
 ## Required Variables
 

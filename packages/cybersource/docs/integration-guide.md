@@ -1,6 +1,6 @@
 # Integration Guide
 
-Step-by-step guide for integrating `@panama-payments/cybersource` into your application.
+Step-by-step guide for integrating `@devhubpty/cybersource` into your application.
 
 ## Architecture Overview
 
@@ -26,7 +26,7 @@ The SDK follows a **client-server split**:
 import {
   CyberSourceClient,
   CyberSourceEnvironment,
-} from '@panama-payments/cybersource/server';
+} from '@devhubpty/cybersource/server';
 
 const client = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,
@@ -121,7 +121,7 @@ const validation = await client.validateAuthentication({
 ### Using `useThreeDS` (recommended)
 
 ```tsx
-import { useThreeDS, ThreeDSModal, ThreeDSStep } from '@panama-payments/cybersource/react';
+import { useThreeDS, ThreeDSModal, ThreeDSStep } from '@devhubpty/cybersource/react';
 
 function Checkout() {
   const threeDS = useThreeDS({
@@ -156,7 +156,7 @@ function Checkout() {
 If you need more control, use the individual step hooks:
 
 ```tsx
-import { useSetupService, useCheckEnrollment, useValidateAuth, usePayment } from '@panama-payments/cybersource/react';
+import { useSetupService, useCheckEnrollment, useValidateAuth, usePayment } from '@devhubpty/cybersource/react';
 
 const setup = useSetupService({ onSetup: ... });
 const enrollment = useCheckEnrollment({ onCheckEnrollment: ... });
@@ -197,7 +197,7 @@ the client fills them from the cache.
 
 ```ts
 // Custom cache (e.g., Redis for multi-instance deployments)
-import { CyberSourceClient, type ThreeDSAuthCache } from '@panama-payments/cybersource/server';
+import { CyberSourceClient, type ThreeDSAuthCache } from '@devhubpty/cybersource/server';
 
 class RedisAuthCache implements ThreeDSAuthCache {
   get(key: string) { /* redis.get */ }
@@ -214,8 +214,8 @@ const client = new CyberSourceClient({
 ## Error Handling
 
 ```ts
-import { CyberSourceError } from '@panama-payments/cybersource/server';
-import { PaymentError } from '@panama-payments/core';
+import { CyberSourceError } from '@devhubpty/cybersource/server';
+import { PaymentError } from '@devhubpty/core';
 
 try {
   await client.processPayment(data);

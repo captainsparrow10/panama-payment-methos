@@ -11,7 +11,7 @@
  *
  * @example
  * ```tsx
- * import { ThreeDSModal } from '@panama-payments/cybersource/react';
+ * import { ThreeDSModal } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const [showChallenge, setShowChallenge] = useState(false);
@@ -120,7 +120,7 @@ export interface ThreeDSModalProps {
  *
  * @example
  * ```tsx
- * import { ThreeDSModal } from '@panama-payments/cybersource/react';
+ * import { ThreeDSModal } from '@devhubpty/cybersource/react';
  *
  * <ThreeDSModal
  *   challengeUrl={threeDS.challengeUrl!}

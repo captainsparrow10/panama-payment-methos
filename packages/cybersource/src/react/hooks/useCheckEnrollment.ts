@@ -7,7 +7,7 @@
  *
  * @example
  * ```tsx
- * import { useCheckEnrollment } from '@panama-payments/cybersource/react';
+ * import { useCheckEnrollment } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const { checkEnrollment, data, isFrictionless, challengeUrl, isLoading, error } = useCheckEnrollment({

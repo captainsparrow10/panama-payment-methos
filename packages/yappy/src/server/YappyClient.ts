@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/server
+ * @module @devhubpty/yappy/server
  * @description Server-side Yappy API client for Node.js environments.
  *
  * IMPORTANT: This module is for server-side use ONLY. Never import or call it
@@ -8,9 +8,9 @@
  */
 
 import axios, { AxiosInstance } from 'axios';
-import type { PaymentLogger } from '@panama-payments/core';
-import { noopLogger, sanitize, withRetry } from '@panama-payments/core';
-import type { RetryConfig } from '@panama-payments/core';
+import type { PaymentLogger } from '@devhubpty/core';
+import { noopLogger, sanitize, withRetry } from '@devhubpty/core';
+import type { RetryConfig } from '@devhubpty/core';
 import {
   YappyClientConfig,
   ValidateMerchantRequest,
@@ -68,7 +68,7 @@ const CDN_URLS = {
  *
  * @example
  * ```ts
- * import { generateOrderId } from '@panama-payments/yappy/server';
+ * import { generateOrderId } from '@devhubpty/yappy/server';
  *
  * const orderId = generateOrderId(); // e.g. "A3KX9MZQ1BPRY7W"
  * ```
@@ -93,15 +93,15 @@ export function generateOrderId(): string {
  * 2. `createOrder()` -- creates a payment order using the token
  * 3. `initCheckout()` -- orchestrates both steps in a single call (recommended)
  *
- * Integrates with `@panama-payments/core` for:
+ * Integrates with `@devhubpty/core` for:
  * - Structured logging with PCI-safe sanitization
  * - Automatic retry with exponential backoff
  * - Typed error hierarchy via `YappyError`
  *
  * @example
  * ```ts
- * import { YappyClient } from '@panama-payments/yappy/server';
- * import { createConsoleLogger } from '@panama-payments/core';
+ * import { YappyClient } from '@devhubpty/yappy/server';
+ * import { createConsoleLogger } from '@devhubpty/core';
  *
  * const yappy = new YappyClient({
  *   merchantId: process.env.YAPPY_MERCHANT_ID!,
@@ -141,7 +141,7 @@ export class YappyClient {
    *
    * @example
    * ```ts
-   * import { YappyClient } from '@panama-payments/yappy/server';
+   * import { YappyClient } from '@devhubpty/yappy/server';
    * import pino from 'pino';
    *
    * const yappy = new YappyClient(

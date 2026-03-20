@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/hooks/useYappyOrderStatus
+ * @module @devhubpty/yappy/react/hooks/useYappyOrderStatus
  * @description React hook for polling the status of a pending Yappy order.
  *
  * Polls your backend status endpoint at a configurable interval until the order
@@ -126,7 +126,7 @@ export interface UseYappyOrderStatusReturn {
  *
  * @example
  * ```tsx
- * import { useYappyOrderStatus } from '@panama-payments/yappy/react';
+ * import { useYappyOrderStatus } from '@devhubpty/yappy/react';
  *
  * function PendingPaymentView({ orderId, expiresAt }: Props) {
  *   const { data, isPolling, error } = useYappyOrderStatus({

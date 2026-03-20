@@ -12,8 +12,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { CMFClient, CMFError } from '@panama-payments/cmf/server';
-import type { CMFPaymentParams } from '@panama-payments/cmf/react';
+import { CMFClient, CMFError } from '@devhubpty/cmf/server';
+import type { CMFPaymentParams } from '@devhubpty/cmf/react';
 
 const cmf = new CMFClient({
   baseUrl: process.env.CMF_URL!,

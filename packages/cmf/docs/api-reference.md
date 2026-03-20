@@ -1,8 +1,8 @@
 # API Reference
 
-Complete API reference for the `@panama-payments/cmf` package.
+Complete API reference for the `@devhubpty/cmf` package.
 
-## Server (`@panama-payments/cmf/server`)
+## Server (`@devhubpty/cmf/server`)
 
 ### CMFClient
 
@@ -56,7 +56,7 @@ class CMFError extends PaymentError {
 | `CMFOtpChannel` | `Email`, `Phone` | OTP delivery channels |
 | `CMFErrorCode` | `GeneralValidation` (1000), `VtcProcessError` (2006) | Known error codes |
 
-## React (`@panama-payments/cmf/react`)
+## React (`@devhubpty/cmf/react`)
 
 ### Hooks
 

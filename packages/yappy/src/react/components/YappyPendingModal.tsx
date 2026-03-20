@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/components/YappyPendingModal
+ * @module @devhubpty/yappy/react/components/YappyPendingModal
  * @description Semantic HTML modal for displaying the pending Yappy payment state.
  *
  * Intentionally unstyled -- provides semantic structure only. Apply your own CSS
@@ -79,7 +79,7 @@ export interface YappyPendingModalProps {
  *
  * @example
  * ```tsx
- * import { YappyPendingModal } from '@panama-payments/yappy/react';
+ * import { YappyPendingModal } from '@devhubpty/yappy/react';
  *
  * function PendingView() {
  *   const { status, timeLeft, cancelPayment, error } = useYappyPendingCheck({

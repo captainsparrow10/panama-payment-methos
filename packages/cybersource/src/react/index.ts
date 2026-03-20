@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/cybersource/react
+ * @module @devhubpty/cybersource/react
  *
  * React hooks and components for CyberSource 3DS payment integration.
  *
@@ -16,7 +16,7 @@
  *   usePayment,
  *   usePaymentMethods,
  *   ThreeDSModal,
- * } from '@panama-payments/cybersource/react';
+ * } from '@devhubpty/cybersource/react';
  * ```
  */
 

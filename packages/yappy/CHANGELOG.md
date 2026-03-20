@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@panama-payments/yappy` will be documented in this file.
+All notable changes to `@devhubpty/yappy` will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -11,8 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Server**
   - `YappyClient` class with `validateMerchant()`, `createOrder()`, `initCheckout()`, and `ping()` methods
-  - Integration with `@panama-payments/core` for structured logging (`PaymentLogger`), PCI-safe sanitization (`sanitize()`), and automatic retry (`withRetry()`)
-  - `YappyError` class extending `PaymentError` from `@panama-payments/core`, with Yappy-specific error codes
+  - Integration with `@devhubpty/core` for structured logging (`PaymentLogger`), PCI-safe sanitization (`sanitize()`), and automatic retry (`withRetry()`)
+  - `YappyError` class extending `PaymentError` from `@devhubpty/core`, with Yappy-specific error codes
   - `validateYappyHash()` with HMAC-SHA256 and `crypto.timingSafeEqual` for webhook verification
   - `parseYappyWebhook()` for parsing and typing raw webhook query params
   - `generateTestWebhook()` static utility for generating valid test webhook payloads

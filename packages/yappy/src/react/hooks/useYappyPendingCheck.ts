@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/hooks/useYappyPendingCheck
+ * @module @devhubpty/yappy/react/hooks/useYappyPendingCheck
  * @description Full-featured orchestrator hook for the Yappy custom payment flow.
  *
  * This hook manages the entire lifecycle of a pending Yappy payment:
@@ -254,7 +254,7 @@ function clearPending(): void {
  *
  * @example
  * ```tsx
- * import { useYappyPendingCheck } from '@panama-payments/yappy/react';
+ * import { useYappyPendingCheck } from '@devhubpty/yappy/react';
  *
  * function CheckoutPage() {
  *   const {

@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/components/YappyButton
+ * @module @devhubpty/yappy/react/components/YappyButton
  * @description Ready-to-use React wrapper around the official `<btn-yappy>` web component.
  *
  * This component uses `useYappyWebComponent` internally and renders the native
@@ -97,7 +97,7 @@ export interface YappyButtonProps {
  *
  * @example
  * ```tsx
- * import { YappyButton, YappyButtonTheme } from '@panama-payments/yappy/react';
+ * import { YappyButton, YappyButtonTheme } from '@devhubpty/yappy/react';
  *
  * function Checkout() {
  *   return (

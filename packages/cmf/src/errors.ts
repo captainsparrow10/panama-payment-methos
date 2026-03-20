@@ -8,7 +8,7 @@
  *
  * @example
  * ```ts
- * import { CMFError } from '@panama-payments/cmf/server';
+ * import { CMFError } from '@devhubpty/cmf/server';
  *
  * try {
  *   await cmf.processPurchaseInQuotas(params);
@@ -22,7 +22,7 @@
  * ```
  */
 
-import { PaymentError } from '@panama-payments/core';
+import { PaymentError } from '@devhubpty/core';
 import type { CMFStatusResult } from './types.js';
 
 /**

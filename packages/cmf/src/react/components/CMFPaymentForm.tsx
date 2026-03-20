@@ -18,7 +18,7 @@
  *
  * @example
  * ```tsx
- * import { CMFPaymentForm } from '@panama-payments/cmf/react';
+ * import { CMFPaymentForm } from '@devhubpty/cmf/react';
  *
  * <CMFPaymentForm
  *   total={150.00}

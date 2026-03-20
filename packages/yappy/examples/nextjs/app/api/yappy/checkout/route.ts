@@ -8,8 +8,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { YappyClient, YappyError } from '@panama-payments/yappy/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { YappyClient, YappyError } from '@devhubpty/yappy/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const yappy = new YappyClient(
   {

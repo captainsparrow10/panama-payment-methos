@@ -12,7 +12,7 @@
  *
  * @example
  * ```ts
- * import { CMFClient, CMFDocumentType } from '@panama-payments/cmf/server';
+ * import { CMFClient, CMFDocumentType } from '@devhubpty/cmf/server';
  *
  * const cmf = new CMFClient({
  *   baseUrl: process.env.CMF_URL!,
@@ -36,12 +36,12 @@ import {
   withRetry,
   sanitize,
   noopLogger,
-} from '@panama-payments/core';
+} from '@devhubpty/core';
 import type {
   PaymentLogger,
   RetryConfig,
   HealthCheckResult,
-} from '@panama-payments/core';
+} from '@devhubpty/core';
 import type {
   CMFClientConfig,
   CMFLoginResponse,
@@ -93,8 +93,8 @@ export interface CMFPaymentOptions {
  *
  * @example
  * ```ts
- * import { CMFClient, CMFDocumentType } from '@panama-payments/cmf/server';
- * import { createConsoleLogger } from '@panama-payments/core';
+ * import { CMFClient, CMFDocumentType } from '@devhubpty/cmf/server';
+ * import { createConsoleLogger } from '@devhubpty/core';
  *
  * const cmf = new CMFClient({
  *   baseUrl: process.env.CMF_URL!,

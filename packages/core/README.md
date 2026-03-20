@@ -1,15 +1,15 @@
-# @panama-payments/core
+# @devhubpty/core
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE)
 
-Shared utilities for Panama payment SDKs. Provides error types, retry logic, PCI-compliant data redaction, pluggable logging, and test helpers used across all `@panama-payments/*` packages.
+Shared utilities for Panama payment SDKs. Provides error types, retry logic, PCI-compliant data redaction, pluggable logging, and test helpers used across all `@devhubpty/*` packages.
 
 ## Installation
 
 ```bash
-npm install @panama-payments/core
+npm install @devhubpty/core
 # or
-pnpm add @panama-payments/core
+pnpm add @devhubpty/core
 ```
 
 ## Utilities
@@ -24,7 +24,7 @@ import {
   ValidationError,
   DeclinedError,
   TimeoutError,
-} from '@panama-payments/core';
+} from '@devhubpty/core';
 
 try {
   await client.processPayment(data);
@@ -46,7 +46,7 @@ try {
 Automatically retries transient failures (timeouts, network errors, rate limits) with configurable exponential backoff and jitter.
 
 ```ts
-import { withRetry } from '@panama-payments/core';
+import { withRetry } from '@devhubpty/core';
 
 const result = await withRetry(() => client.processPayment(data), {
   maxAttempts: 3,
@@ -62,7 +62,7 @@ const result = await withRetry(() => client.processPayment(data), {
 Works with Winston, Pino, or any logger implementing `debug/info/warn/error`. Ships with a zero-dependency console logger for development.
 
 ```ts
-import { createConsoleLogger, noopLogger } from '@panama-payments/core';
+import { createConsoleLogger, noopLogger } from '@devhubpty/core';
 
 // Development: console logger with timestamps
 const logger = createConsoleLogger({ level: 'debug', prefix: '[cmf]' });
@@ -80,7 +80,7 @@ new CMFClient({ logger: noopLogger });
 Sanitize sensitive fields before logging. Handles card numbers, CVVs, tokens, API keys, and Yappy secrets.
 
 ```ts
-import { sanitize, maskCardNumber } from '@panama-payments/core';
+import { sanitize, maskCardNumber } from '@devhubpty/core';
 
 const safe = sanitize({
   cardNumber: '4111111111111111',
@@ -98,7 +98,7 @@ maskCardNumber('4111111111111111');
 Prevent duplicate charges on retries by attaching a unique idempotency key to each request.
 
 ```ts
-import { generateIdempotencyKey, IDEMPOTENCY_HEADER } from '@panama-payments/core';
+import { generateIdempotencyKey, IDEMPOTENCY_HEADER } from '@devhubpty/core';
 
 const key = generateIdempotencyKey();
 headers[IDEMPOTENCY_HEADER] = key;
@@ -109,7 +109,7 @@ headers[IDEMPOTENCY_HEADER] = key;
 Parse `Retry-After` headers and wait the appropriate duration before retrying.
 
 ```ts
-import { parseRateLimitHeaders, waitForRateLimit } from '@panama-payments/core';
+import { parseRateLimitHeaders, waitForRateLimit } from '@devhubpty/core';
 
 const info = parseRateLimitHeaders(response.headers, response.status);
 if (info.limited) {
@@ -122,7 +122,7 @@ if (info.limited) {
 Verify API endpoint reachability with latency measurement.
 
 ```ts
-import { checkHealth } from '@panama-payments/core';
+import { checkHealth } from '@devhubpty/core';
 
 const health = await checkHealth('https://apitest.cybersource.com');
 if (health.reachable) {
@@ -135,7 +135,7 @@ if (health.reachable) {
 Automatic tracing when `@opentelemetry/api` is installed. No-op when it is not.
 
 ```ts
-import { createSpan } from '@panama-payments/core';
+import { createSpan } from '@devhubpty/core';
 
 const span = createSpan('cybersource.processPayment', { amount: '50.00' });
 try {
@@ -159,7 +159,7 @@ import {
   TEST_CARDS,
   generateTestOrderId,
   generateTestWebhookPayload,
-} from '@panama-payments/core';
+} from '@devhubpty/core';
 
 // Use a test card in sandbox
 const payment = await client.processPayment({
@@ -182,9 +182,9 @@ const { payload, signature } = generateTestWebhookPayload(
 
 This package provides the foundation for:
 
-- [`@panama-payments/cybersource`](../cybersource/) — CyberSource payment processing with 3DS
-- [`@panama-payments/yappy`](../yappy/) — Yappy mobile payment integration
-- [`@panama-payments/cmf`](../cmf/) — CMF bank payment processing
+- [`@devhubpty/cybersource`](../cybersource/) — CyberSource payment processing with 3DS
+- [`@devhubpty/yappy`](../yappy/) — Yappy mobile payment integration
+- [`@devhubpty/cmf`](../cmf/) — CMF bank payment processing
 
 ## Contributors
 

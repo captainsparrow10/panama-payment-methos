@@ -8,11 +8,11 @@ Open-source TypeScript SDKs for Panamanian payment methods. Built for developers
 
 ```mermaid
 graph TD
-    subgraph "@panama-payments"
-        CORE["@panama-payments/core\nerrors - retry - logger - sanitize\nidempotency - rate-limit - health\ntelemetry - testing"]
-        CMF["@panama-payments/cmf\nFinanciamiento CMF\n(Banco General / HNL)"]
-        YAPPY["@panama-payments/yappy\nPagos Yappy\n(Banco General)"]
-        CYBER["@panama-payments/cybersource\nPagos con tarjeta 3DS\n(CyberSource / Visa)"]
+    subgraph "@devhubpty"
+        CORE["@devhubpty/core\nerrors - retry - logger - sanitize\nidempotency - rate-limit - health\ntelemetry - testing"]
+        CMF["@devhubpty/cmf\nFinanciamiento CMF\n(Banco General / HNL)"]
+        YAPPY["@devhubpty/yappy\nPagos Yappy\n(Banco General)"]
+        CYBER["@devhubpty/cybersource\nPagos con tarjeta 3DS\n(CyberSource / Visa)"]
     end
 
     CMF -->|depends on| CORE
@@ -36,10 +36,10 @@ graph TD
 
 | Package | Description | Server | React | Docs |
 |---------|-------------|--------|-------|------|
-| [`@panama-payments/core`](./packages/core/) | Shared utilities (errors, retry, logger, PCI redaction) | - | - | [README](./packages/core/README.md) |
-| [`@panama-payments/cmf`](./packages/cmf/) | CMF financing (HNL / Banco General) | `./server` | `./react` | [Docs](./packages/cmf/docs/) |
-| [`@panama-payments/yappy`](./packages/yappy/) | Yappy mobile payments (Banco General) | `./server` | `./react` `./vanilla` | [Docs](./packages/yappy/docs/) |
-| [`@panama-payments/cybersource`](./packages/cybersource/) | CyberSource 3DS card payments | `./server` | `./react` | [Docs](./packages/cybersource/docs/) |
+| [`@devhubpty/core`](./packages/core/) | Shared utilities (errors, retry, logger, PCI redaction) | - | - | [README](./packages/core/README.md) |
+| [`@devhubpty/cmf`](./packages/cmf/) | CMF financing (HNL / Banco General) | `./server` | `./react` | [Docs](./packages/cmf/docs/) |
+| [`@devhubpty/yappy`](./packages/yappy/) | Yappy mobile payments (Banco General) | `./server` | `./react` `./vanilla` | [Docs](./packages/yappy/docs/) |
+| [`@devhubpty/cybersource`](./packages/cybersource/) | CyberSource 3DS card payments | `./server` | `./react` | [Docs](./packages/cybersource/docs/) |
 
 ## Quick Start
 
@@ -47,7 +47,7 @@ graph TD
 
 ```typescript
 // Backend (Node.js)
-import { CMFClient, CMFDocumentType } from '@panama-payments/cmf/server';
+import { CMFClient, CMFDocumentType } from '@devhubpty/cmf/server';
 
 const cmf = new CMFClient({
   baseUrl: process.env.CMF_URL!,
@@ -65,7 +65,7 @@ const quotas = await cmf.getQuotas(customer.products[0].customerProductId, 500);
 
 ```typescript
 // Frontend (React)
-import { useCMFCustomer, useCMFQuotas, CMFDocumentType } from '@panama-payments/cmf/react';
+import { useCMFCustomer, useCMFQuotas, CMFDocumentType } from '@devhubpty/cmf/react';
 
 const { search, customer, products } = useCMFCustomer();
 const { getQuotas, quotas } = useCMFQuotas();
@@ -78,7 +78,7 @@ await getQuotas(products[0].customerProductId, 500);
 
 ```typescript
 // Backend
-import { YappyClient } from '@panama-payments/yappy/server';
+import { YappyClient } from '@devhubpty/yappy/server';
 
 const yappy = new YappyClient({
   merchantId: process.env.YAPPY_MERCHANT_ID!,
@@ -97,7 +97,7 @@ const { transactionId } = await yappy.initiatePayment({
 
 ```typescript
 // Webhook validation
-import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
 
 const result = validateYappyHash(req.query, process.env.CLAVE_SECRETA!);
 if (result.valid && result.status === YappyStatus.Executed) {
@@ -109,7 +109,7 @@ if (result.valid && result.status === YappyStatus.Executed) {
 
 ```typescript
 // Backend
-import { CyberSourceClient, CyberSourceEnvironment } from '@panama-payments/cybersource/server';
+import { CyberSourceClient, CyberSourceEnvironment } from '@devhubpty/cybersource/server';
 
 const cs = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,
@@ -126,20 +126,20 @@ const payment = await cs.processPayment({ auth3DSResult, amount: '50.00', ... })
 
 ```typescript
 // Frontend (React) — orchestrator hook
-import { useThreeDS } from '@panama-payments/cybersource/react';
+import { useThreeDS } from '@devhubpty/cybersource/react';
 
 const { step, startAuth, completeChallenge, challengeRequired, challengeUrl } = useThreeDS({
   onAuthenticated: (auth3DS) => processPayment(auth3DS),
 });
 ```
 
-## Shared Features (via @panama-payments/core)
+## Shared Features (via @devhubpty/core)
 
 All 3 SDKs include these production-grade features:
 
 ```mermaid
 flowchart LR
-    subgraph "@panama-payments/core"
+    subgraph "@devhubpty/core"
         A["Error Hierarchy\nPaymentError > DeclinedError\nTimeoutError, NetworkError..."]
         B["Retry + Backoff\nExponential delay + jitter\nOnly retries transient errors"]
         C["Logger\nPluggable: Winston, Pino\nPCI data auto-redacted"]
@@ -190,10 +190,10 @@ pnpm clean
 ```
 panama-payment-methos/
 ├── packages/
-│   ├── core/           @panama-payments/core
-│   ├── cmf/            @panama-payments/cmf          (./server + ./react)
-│   ├── yappy/          @panama-payments/yappy         (./server + ./react + ./vanilla)
-│   └── cybersource/    @panama-payments/cybersource   (./server + ./react)
+│   ├── core/           @devhubpty/core
+│   ├── cmf/            @devhubpty/cmf          (./server + ./react)
+│   ├── yappy/          @devhubpty/yappy         (./server + ./react + ./vanilla)
+│   └── cybersource/    @devhubpty/cybersource   (./server + ./react)
 ├── pnpm-workspace.yaml
 ├── tsconfig.base.json
 └── package.json

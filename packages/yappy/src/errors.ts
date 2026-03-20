@@ -1,15 +1,15 @@
 /**
- * @module @panama-payments/yappy/errors
+ * @module @devhubpty/yappy/errors
  * @description Yappy-specific error class that extends the shared PaymentError.
  *
  * All errors thrown by the YappyClient are instances of `YappyError`, which in turn
- * extends `PaymentError` from `@panama-payments/core`. This allows you to catch
+ * extends `PaymentError` from `@devhubpty/core`. This allows you to catch
  * Yappy-specific errors while still supporting a generic `PaymentError` catch-all.
  *
  * @example
  * ```ts
- * import { YappyError } from '@panama-payments/yappy/server';
- * import { PaymentError } from '@panama-payments/core';
+ * import { YappyError } from '@devhubpty/yappy/server';
+ * import { PaymentError } from '@devhubpty/core';
  *
  * try {
  *   await yappy.initCheckout({ ... });
@@ -23,19 +23,19 @@
  * ```
  */
 
-import { PaymentError } from '@panama-payments/core';
+import { PaymentError } from '@devhubpty/core';
 import type { YappyErrorCode } from './types.js';
 
 /**
  * Error class for all Yappy API errors.
  *
- * Extends `PaymentError` from `@panama-payments/core` and adds the Yappy-specific
+ * Extends `PaymentError` from `@devhubpty/core` and adds the Yappy-specific
  * error code for more granular error handling.
  *
  * @example
  * ```ts
- * import { YappyError } from '@panama-payments/yappy/server';
- * import { YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@panama-payments/yappy/server';
+ * import { YappyError } from '@devhubpty/yappy/server';
+ * import { YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@devhubpty/yappy/server';
  *
  * try {
  *   await yappy.validateMerchant();

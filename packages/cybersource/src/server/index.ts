@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/cybersource/server
+ * @module @devhubpty/cybersource/server
  *
  * Server-side CyberSource SDK for Node.js / Express / Next.js API routes.
  *
@@ -15,7 +15,7 @@
  *   CyberSourceClient,
  *   CyberSourceEnvironment,
  *   InMemoryThreeDSAuthCache,
- * } from '@panama-payments/cybersource/server';
+ * } from '@devhubpty/cybersource/server';
  *
  * const client = new CyberSourceClient({
  *   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,

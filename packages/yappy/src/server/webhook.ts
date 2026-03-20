@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/server/webhook
+ * @module @devhubpty/yappy/server/webhook
  * @description Utilities for validating and parsing Yappy IPN webhook requests.
  *
  * Yappy notifies your server of payment results via HTTP GET requests to the
@@ -31,7 +31,7 @@ import { YappyStatus, YappyWebhookPayload, YappyWebhookResult } from '../types.j
  *
  * @example
  * ```ts
- * import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+ * import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
  *
  * // Express.js:
  * app.get('/webhooks/yappy', (req, res) => {
@@ -115,7 +115,7 @@ export function validateYappyHash(
  *
  * @example
  * ```ts
- * import { parseYappyWebhook, YappyStatus } from '@panama-payments/yappy/server';
+ * import { parseYappyWebhook, YappyStatus } from '@devhubpty/yappy/server';
  *
  * // Express.js:
  * app.get('/webhooks/yappy', (req, res) => {
@@ -170,7 +170,7 @@ export function parseYappyWebhook(query: Record<string, string>): YappyWebhookPa
  *
  * @example
  * ```ts
- * import { generateTestWebhook, validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+ * import { generateTestWebhook, validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
  *
  * const secretKey = process.env.CLAVE_SECRETA!;
  *

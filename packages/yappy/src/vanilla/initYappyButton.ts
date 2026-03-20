@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/vanilla
+ * @module @devhubpty/yappy/vanilla
  * @description Vanilla JavaScript integration for the Yappy `<btn-yappy>` web component.
  *
  * Use this for projects without React: Vue, Svelte, Angular, plain HTML, etc.
@@ -96,7 +96,7 @@ export interface InitYappyButtonOptions extends YappyButtonConfig {
  *
  * @example
  * ```ts
- * import { initYappyButton } from '@panama-payments/yappy/vanilla';
+ * import { initYappyButton } from '@devhubpty/yappy/vanilla';
  *
  * const container = document.getElementById('yappy-container')!;
  * const cleanup = initYappyButton(container, {
@@ -116,7 +116,7 @@ export interface InitYappyButtonOptions extends YappyButtonConfig {
  * ```vue
  * <script setup>
  * import { ref, onMounted, onUnmounted } from 'vue'
- * import { initYappyButton } from '@panama-payments/yappy/vanilla'
+ * import { initYappyButton } from '@devhubpty/yappy/vanilla'
  *
  * const containerRef = ref(null)
  * let cleanup = null

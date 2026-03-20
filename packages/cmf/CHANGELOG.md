@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@panama-payments/cmf` will be documented in this file.
+All notable changes to `@devhubpty/cmf` will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Transaction verification
   - OTP send/verify via email and WhatsApp
   - Health check via `ping()`
-- **CMFError** -- typed error class extending `PaymentError` from `@panama-payments/core`, with `statusResult` for structured error details
+- **CMFError** -- typed error class extending `PaymentError` from `@devhubpty/core`, with `statusResult` for structured error details
 - **Structured logging** -- optional `PaymentLogger` integration with PCI-safe data sanitization
 - **Automatic retry** -- exponential backoff for network/timeout errors (not business errors)
 - **Idempotency key support** -- optional `idempotencyKey` parameter for payment methods

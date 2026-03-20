@@ -1,5 +1,5 @@
 {
-  "name": "@panama-payments/core",
+  "name": "@devhubpty/core",
   "version": "0.1.0",
   "description": "Shared utilities for Panama payment SDKs — errors, retry, logging, PCI redaction, testing",
   "license": "MIT",

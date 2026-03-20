@@ -16,7 +16,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CMFPaymentForm } from '@panama-payments/cmf/react';
+import { CMFPaymentForm } from '@devhubpty/cmf/react';
 
 export default function CheckoutPage() {
   const [orderConfirmed, setOrderConfirmed] = useState(false);

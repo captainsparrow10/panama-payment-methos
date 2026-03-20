@@ -6,8 +6,8 @@ This guide covers how to integrate the CMF SDK into Express.js and Next.js appli
 
 The CMF SDK uses a client-server architecture:
 
-- **Server** (`@panama-payments/cmf/server`): `CMFClient` holds merchant credentials and talks to the CMF API directly. Must NEVER run in the browser.
-- **React** (`@panama-payments/cmf/react`): Hooks and components call your backend API, which proxies to CMF. Safe for browser use.
+- **Server** (`@devhubpty/cmf/server`): `CMFClient` holds merchant credentials and talks to the CMF API directly. Must NEVER run in the browser.
+- **React** (`@devhubpty/cmf/react`): Hooks and components call your backend API, which proxies to CMF. Safe for browser use.
 
 ```
 Browser (React hooks) --> Your Backend (CMFClient) --> CMF API
@@ -18,7 +18,7 @@ Browser (React hooks) --> Your Backend (CMFClient) --> CMF API
 ### 1. Install dependencies
 
 ```bash
-pnpm add @panama-payments/cmf @panama-payments/core axios express
+pnpm add @devhubpty/cmf @devhubpty/core axios express
 pnpm add -D @types/express typescript
 ```
 
@@ -26,8 +26,8 @@ pnpm add -D @types/express typescript
 
 ```ts
 // src/cmf.ts
-import { CMFClient } from '@panama-payments/cmf/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { CMFClient } from '@devhubpty/cmf/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 export const cmf = new CMFClient(
   {
@@ -66,7 +66,7 @@ app.listen(3000);
 ### 1. Install dependencies
 
 ```bash
-bun add @panama-payments/cmf @panama-payments/core axios
+bun add @devhubpty/cmf @devhubpty/core axios
 bun add -D @types/react typescript
 ```
 
@@ -87,7 +87,7 @@ See `examples/nextjs/api/` for complete implementations.
 // app/checkout/page.tsx
 'use client';
 
-import { CMFPaymentForm } from '@panama-payments/cmf/react';
+import { CMFPaymentForm } from '@devhubpty/cmf/react';
 
 export default function CheckoutPage() {
   return (
@@ -116,8 +116,8 @@ If you need more control over the UI, use the hooks directly:
 ```tsx
 'use client';
 
-import { useCMFCustomer, useCMFOtp, useCMFQuotas, useCMFPayment } from '@panama-payments/cmf/react';
-import { CMFDocumentType, CMFOtpChannel } from '@panama-payments/cmf/react';
+import { useCMFCustomer, useCMFOtp, useCMFQuotas, useCMFPayment } from '@devhubpty/cmf/react';
+import { CMFDocumentType, CMFOtpChannel } from '@devhubpty/cmf/react';
 
 export default function CustomCheckout() {
   const customer = useCMFCustomer();

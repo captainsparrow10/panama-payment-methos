@@ -4,13 +4,13 @@
 
 ```bash
 # pnpm (recommended for monorepos)
-pnpm add @panama-payments/cmf @panama-payments/core
+pnpm add @devhubpty/cmf @devhubpty/core
 
 # npm
-npm install @panama-payments/cmf @panama-payments/core
+npm install @devhubpty/cmf @devhubpty/core
 
 # bun
-bun add @panama-payments/cmf @panama-payments/core
+bun add @devhubpty/cmf @devhubpty/core
 ```
 
 ## Quick Setup
@@ -29,7 +29,7 @@ CMF_CREATED_BY=system
 ### 2. Create the client (server-side only)
 
 ```ts
-import { CMFClient } from '@panama-payments/cmf/server';
+import { CMFClient } from '@devhubpty/cmf/server';
 
 const cmf = new CMFClient({
   baseUrl: process.env.CMF_URL!,
@@ -44,7 +44,7 @@ const cmf = new CMFClient({
 ### 3. Add logging (optional but recommended)
 
 ```ts
-import { createConsoleLogger } from '@panama-payments/core';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const cmf = new CMFClient(
   { /* config */ },
@@ -58,7 +58,7 @@ const cmf = new CMFClient(
 ### 4. Make your first API call
 
 ```ts
-import { CMFDocumentType } from '@panama-payments/cmf/server';
+import { CMFDocumentType } from '@devhubpty/cmf/server';
 
 await cmf.ensureAuthenticated();
 const customer = await cmf.getCustomerByDocument(CMFDocumentType.Cedula, '8-123-456');
@@ -68,7 +68,7 @@ console.log(`Found: ${customer.fullName}`);
 ### 5. Use React hooks (frontend)
 
 ```tsx
-import { useCMFCustomer, CMFDocumentType } from '@panama-payments/cmf/react';
+import { useCMFCustomer, CMFDocumentType } from '@devhubpty/cmf/react';
 
 function CustomerSearch() {
   const { search, customer, products, isLoading, error } = useCMFCustomer();

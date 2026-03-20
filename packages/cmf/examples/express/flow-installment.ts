@@ -11,8 +11,8 @@
  * ```
  */
 
-import { CMFClient, CMFDocumentType, CMFError } from '@panama-payments/cmf/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { CMFClient, CMFDocumentType, CMFError } from '@devhubpty/cmf/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 async function main() {
   // 1. Initialize the client

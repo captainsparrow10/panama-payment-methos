@@ -18,8 +18,8 @@
  */
 
 import express from 'express';
-import { YappyClient, generateOrderId, YappyError } from '@panama-payments/yappy/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { YappyClient, generateOrderId, YappyError } from '@devhubpty/yappy/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const app = express();
 app.use(express.json());

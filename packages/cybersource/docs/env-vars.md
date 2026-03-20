@@ -42,7 +42,7 @@ CYBERSOURCE_RUN_ENVIRONMENT=api.cybersource.com
 The environment variables map to the `CyberSourceClientConfig` interface:
 
 ```ts
-import { CyberSourceClient, CyberSourceEnvironment } from '@panama-payments/cybersource/server';
+import { CyberSourceClient, CyberSourceEnvironment } from '@devhubpty/cybersource/server';
 
 const client = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,       // CYBERSOURCE_MERCHANT_ID

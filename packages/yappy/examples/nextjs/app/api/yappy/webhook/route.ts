@@ -8,7 +8,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;

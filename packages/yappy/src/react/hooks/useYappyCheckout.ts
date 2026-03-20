@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/react/hooks/useYappyCheckout
+ * @module @devhubpty/yappy/react/hooks/useYappyCheckout
  * @description React hook for initiating a Yappy payment from a custom UI (no web component).
  *
  * Use this when you want full control over your payment UI instead of using the
@@ -83,7 +83,7 @@ export interface UseYappyCheckoutReturn {
  *
  * @example
  * ```tsx
- * import { useYappyCheckout } from '@panama-payments/yappy/react';
+ * import { useYappyCheckout } from '@devhubpty/yappy/react';
  *
  * function YappyForm() {
  *   const { initPayment, isLoading, error, data } = useYappyCheckout({

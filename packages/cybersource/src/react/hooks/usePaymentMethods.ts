@@ -7,7 +7,7 @@
  *
  * @example
  * ```tsx
- * import { usePaymentMethods } from '@panama-payments/cybersource/react';
+ * import { usePaymentMethods } from '@devhubpty/cybersource/react';
  *
  * function PaymentMethodsPage() {
  *   const { addCard, deleteCard, result, isLoading, error } = usePaymentMethods({

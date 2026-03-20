@@ -10,8 +10,8 @@ import {
   CyberSourceClient,
   CyberSourceEnvironment,
   type PaymentResponse,
-} from '@panama-payments/cybersource/server';
-import { createConsoleLogger } from '@panama-payments/core';
+} from '@devhubpty/cybersource/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const client = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,

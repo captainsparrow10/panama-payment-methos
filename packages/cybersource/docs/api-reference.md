@@ -1,8 +1,8 @@
 # API Reference
 
-Complete API documentation for `@panama-payments/cybersource`.
+Complete API documentation for `@devhubpty/cybersource`.
 
-## Server API (`@panama-payments/cybersource/server`)
+## Server API (`@devhubpty/cybersource/server`)
 
 ### `CyberSourceClient`
 
@@ -202,7 +202,7 @@ cache.destroy(); // Stop cleanup interval
 
 ---
 
-## React API (`@panama-payments/cybersource/react`)
+## React API (`@devhubpty/cybersource/react`)
 
 ### `useThreeDS(options)`
 

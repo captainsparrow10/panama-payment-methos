@@ -18,7 +18,7 @@
  *
  * @example
  * ```ts
- * import { CMFDocumentType } from '@panama-payments/cmf/server';
+ * import { CMFDocumentType } from '@devhubpty/cmf/server';
  *
  * const customer = await cmf.getCustomerByDocument(
  *   CMFDocumentType.Cedula,
@@ -42,7 +42,7 @@ export enum CMFDocumentType {
  *
  * @example
  * ```ts
- * import { CMFOtpChannel } from '@panama-payments/cmf/server';
+ * import { CMFOtpChannel } from '@devhubpty/cmf/server';
  *
  * await cmf.sendOtpByPhone('+50761234567'); // Phone = WhatsApp
  * await cmf.sendOtpByEmail('user@example.com'); // Email
@@ -535,7 +535,7 @@ export interface CMFApiResponse<T = unknown> {
  *
  * @example
  * ```ts
- * import { CMFClient } from '@panama-payments/cmf/server';
+ * import { CMFClient } from '@devhubpty/cmf/server';
  *
  * const cmf = new CMFClient({
  *   baseUrl: process.env.CMF_URL!,

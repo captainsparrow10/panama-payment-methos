@@ -1,4 +1,4 @@
-# @panama-payments/yappy
+# @devhubpty/yappy
 
 SDK for [Yappy](https://www.yappy.com.pa/) (Banco General) mobile payment integration in Panama.
 
@@ -6,7 +6,7 @@ Part of the [`@panama-payments`](https://github.com/captainsparrow10/panama-paym
 
 ## Features
 
-- **Server-side client** (`YappyClient`) with automatic retry, structured logging, and PCI-safe sanitization via `@panama-payments/core`
+- **Server-side client** (`YappyClient`) with automatic retry, structured logging, and PCI-safe sanitization via `@devhubpty/core`
 - **Webhook validation** with HMAC-SHA256 and `crypto.timingSafeEqual`
 - **React hooks and components** for both the official web component and fully custom UIs
 - **Vanilla JS** integration for Vue, Svelte, Angular, and plain HTML
@@ -16,7 +16,7 @@ Part of the [`@panama-payments`](https://github.com/captainsparrow10/panama-paym
 ## Installation
 
 ```bash
-npm install @panama-payments/yappy @panama-payments/core
+npm install @devhubpty/yappy @devhubpty/core
 ```
 
 ## Quick Start
@@ -24,7 +24,7 @@ npm install @panama-payments/yappy @panama-payments/core
 ### Server
 
 ```typescript
-import { YappyClient } from '@panama-payments/yappy/server';
+import { YappyClient } from '@devhubpty/yappy/server';
 
 const yappy = new YappyClient({
   merchantId: process.env.YAPPY_MERCHANT_ID!,
@@ -44,7 +44,7 @@ const result = await yappy.initCheckout({
 ### React (Web Component)
 
 ```tsx
-import { YappyButton } from '@panama-payments/yappy/react';
+import { YappyButton } from '@devhubpty/yappy/react';
 
 <YappyButton
   checkoutEndpoint="/api/yappy/checkout"
@@ -56,7 +56,7 @@ import { YappyButton } from '@panama-payments/yappy/react';
 ### React (Custom UI)
 
 ```tsx
-import { useYappyPendingCheck, YappyPhoneInput, YappyPendingModal } from '@panama-payments/yappy/react';
+import { useYappyPendingCheck, YappyPhoneInput, YappyPendingModal } from '@devhubpty/yappy/react';
 
 const { status, timeLeft, startPayment, cancelPayment } = useYappyPendingCheck({
   checkoutEndpoint: '/api/yappy/checkout',
@@ -68,7 +68,7 @@ const { status, timeLeft, startPayment, cancelPayment } = useYappyPendingCheck({
 ### Webhook
 
 ```typescript
-import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
 
 const result = validateYappyHash(req.query, process.env.CLAVE_SECRETA!);
 if (result.valid && result.status === YappyStatus.Executed) {
@@ -89,9 +89,9 @@ if (result.valid && result.status === YappyStatus.Executed) {
 
 | Entry Point | Description |
 |-------------|-------------|
-| `@panama-payments/yappy/server` | `YappyClient`, webhook utilities, error classes |
-| `@panama-payments/yappy/react` | React hooks and components |
-| `@panama-payments/yappy/vanilla` | Framework-agnostic web component integration |
+| `@devhubpty/yappy/server` | `YappyClient`, webhook utilities, error classes |
+| `@devhubpty/yappy/react` | React hooks and components |
+| `@devhubpty/yappy/vanilla` | Framework-agnostic web component integration |
 
 ## Contributors
 

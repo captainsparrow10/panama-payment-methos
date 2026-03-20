@@ -1,5 +1,5 @@
 {
-  "name": "@panama-payments/cmf",
+  "name": "@devhubpty/cmf",
   "version": "0.1.0",
   "description": "SDK for CMF (Banco General / HNL) financing integration in Panama",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@panama-payments/core": "workspace:*",
+    "@devhubpty/core": "workspace:*",
     "axios": "^1.7.0"
   },
   "peerDependencies": {

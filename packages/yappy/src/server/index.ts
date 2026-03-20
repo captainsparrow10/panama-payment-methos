@@ -1,14 +1,14 @@
 /**
- * @module @panama-payments/yappy/server
+ * @module @devhubpty/yappy/server
  * @description Server-side exports for the Yappy payment SDK.
  *
  * Import from this subpath in Node.js / server-side code:
  * ```typescript
- * import { YappyClient, validateYappyHash, generateOrderId } from '@panama-payments/yappy/server';
+ * import { YappyClient, validateYappyHash, generateOrderId } from '@devhubpty/yappy/server';
  * ```
  *
  * This module does NOT export React hooks or browser-side components.
- * For client-side code, use `@panama-payments/yappy/react` or `@panama-payments/yappy/vanilla`.
+ * For client-side code, use `@devhubpty/yappy/react` or `@devhubpty/yappy/vanilla`.
  */
 
 // Client

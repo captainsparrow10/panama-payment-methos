@@ -1,5 +1,5 @@
 {
-  "name": "@panama-payments/cybersource",
+  "name": "@devhubpty/cybersource",
   "version": "0.1.0",
   "description": "SDK for CyberSource 3DS payment integration with card tokenization, vaulting, and payment processing",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@panama-payments/core": "workspace:*",
+    "@devhubpty/core": "workspace:*",
     "cybersource-rest-client": "^0.0.62"
   },
   "peerDependencies": {

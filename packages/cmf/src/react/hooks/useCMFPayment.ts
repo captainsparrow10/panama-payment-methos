@@ -169,7 +169,7 @@ export interface UseCMFPaymentReturn {
  *
  * @example
  * ```tsx
- * import { useCMFPayment } from '@panama-payments/cmf/react';
+ * import { useCMFPayment } from '@devhubpty/cmf/react';
  *
  * function PaymentButton({ product, plan, customer, total }: Props) {
  *   const { pay, isLoading, result, error } = useCMFPayment();

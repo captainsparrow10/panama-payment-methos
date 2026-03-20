@@ -78,7 +78,7 @@ export interface UseCMFQuotasReturn {
  *
  * @example
  * ```tsx
- * import { useCMFQuotas } from '@panama-payments/cmf/react';
+ * import { useCMFQuotas } from '@devhubpty/cmf/react';
  *
  * function QuotaSelector({ productId, amount }: { productId: string; amount: number }) {
  *   const { getQuotas, quotas, isLoading, error } = useCMFQuotas();

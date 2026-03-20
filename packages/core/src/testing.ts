@@ -10,7 +10,7 @@ import { createHmac, randomBytes } from 'crypto';
  *
  * @example
  * ```ts
- * import { TEST_CARDS } from '@panama-payments/core';
+ * import { TEST_CARDS } from '@devhubpty/core';
  *
  * const payment = await client.processPayment({
  *   cardNumber: TEST_CARDS.VISA_APPROVED.number,

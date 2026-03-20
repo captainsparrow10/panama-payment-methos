@@ -4,13 +4,13 @@
 
 ```bash
 # With pnpm (recommended for monorepos)
-pnpm add @panama-payments/cybersource @panama-payments/core
+pnpm add @devhubpty/cybersource @devhubpty/core
 
 # With npm
-npm install @panama-payments/cybersource @panama-payments/core
+npm install @devhubpty/cybersource @devhubpty/core
 
 # With bun
-bun add @panama-payments/cybersource @panama-payments/core
+bun add @devhubpty/cybersource @devhubpty/core
 ```
 
 ## Quick Setup
@@ -30,8 +30,8 @@ CYBERSOURCE_RUN_ENVIRONMENT=apitest.cybersource.com
 import {
   CyberSourceClient,
   CyberSourceEnvironment,
-} from '@panama-payments/cybersource/server';
-import { createConsoleLogger } from '@panama-payments/core';
+} from '@devhubpty/cybersource/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const client = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,
@@ -52,7 +52,7 @@ console.log(health.ok ? 'Connected' : 'Unreachable');
 ### 4. Use React hooks (client-side)
 
 ```tsx
-import { useThreeDS, ThreeDSModal } from '@panama-payments/cybersource/react';
+import { useThreeDS, ThreeDSModal } from '@devhubpty/cybersource/react';
 
 const threeDS = useThreeDS({
   onSetup: async (payload) => {
@@ -83,8 +83,8 @@ const threeDS = useThreeDS({
 
 | Import path | Environment | Contains |
 |-------------|-------------|----------|
-| `@panama-payments/cybersource/server` | Node.js | `CyberSourceClient`, auth cache, types, enums |
-| `@panama-payments/cybersource/react` | Browser | Hooks, `ThreeDSModal`, types, enums |
+| `@devhubpty/cybersource/server` | Node.js | `CyberSourceClient`, auth cache, types, enums |
+| `@devhubpty/cybersource/react` | Browser | Hooks, `ThreeDSModal`, types, enums |
 
 ## Next Steps
 

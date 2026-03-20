@@ -13,7 +13,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { CMFClient, CMFError } from '@panama-payments/cmf/server';
+import { CMFClient, CMFError } from '@devhubpty/cmf/server';
 
 const cmf = new CMFClient({
   baseUrl: process.env.CMF_URL!,

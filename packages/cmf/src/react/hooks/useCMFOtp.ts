@@ -136,7 +136,7 @@ export interface UseCMFOtpReturn {
  *
  * @example
  * ```tsx
- * import { useCMFOtp, CMFOtpChannel } from '@panama-payments/cmf/react';
+ * import { useCMFOtp, CMFOtpChannel } from '@devhubpty/cmf/react';
  *
  * function OtpVerification({ email }: { email: string }) {
  *   const { sendOtp, verifyOtp, step, error, isLoading } = useCMFOtp();

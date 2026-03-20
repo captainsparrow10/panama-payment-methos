@@ -17,7 +17,7 @@
  *
  * @example
  * ```ts
- * import { CyberSourceEnvironment } from '@panama-payments/cybersource/server';
+ * import { CyberSourceEnvironment } from '@devhubpty/cybersource/server';
  *
  * const env = CyberSourceEnvironment.Test; // 'apitest.cybersource.com'
  * ```

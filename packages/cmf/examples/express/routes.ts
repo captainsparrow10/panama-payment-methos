@@ -15,8 +15,8 @@
  */
 
 import { Router, type Request, type Response } from 'express';
-import { CMFClient, CMFDocumentType, CMFError } from '@panama-payments/cmf/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { CMFClient, CMFDocumentType, CMFError } from '@devhubpty/cmf/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const router = Router();
 

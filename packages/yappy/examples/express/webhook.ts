@@ -12,7 +12,7 @@
  */
 
 import express from 'express';
-import { validateYappyHash, parseYappyWebhook, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, parseYappyWebhook, YappyStatus } from '@devhubpty/yappy/server';
 
 const app = express();
 

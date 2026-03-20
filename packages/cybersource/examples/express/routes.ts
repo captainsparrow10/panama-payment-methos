@@ -11,8 +11,8 @@ import {
   CyberSourceClient,
   CyberSourceEnvironment,
   CyberSourceError,
-} from '@panama-payments/cybersource/server';
-import { createConsoleLogger } from '@panama-payments/core';
+} from '@devhubpty/cybersource/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 // --- Client setup ---
 

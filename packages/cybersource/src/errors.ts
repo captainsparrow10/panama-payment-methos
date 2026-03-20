@@ -1,12 +1,12 @@
 /**
  * CyberSource-specific error class.
  *
- * Extends `PaymentError` from `@panama-payments/core` to carry CyberSource
+ * Extends `PaymentError` from `@devhubpty/core` to carry CyberSource
  * processor codes and error details from the API response body.
  *
  * @example
  * ```ts
- * import { CyberSourceError } from '@panama-payments/cybersource/server';
+ * import { CyberSourceError } from '@devhubpty/cybersource/server';
  *
  * try {
  *   await client.processPayment(data);
@@ -19,7 +19,7 @@
  * }
  * ```
  */
-import { PaymentError } from '@panama-payments/core';
+import { PaymentError } from '@devhubpty/core';
 
 export class CyberSourceError extends PaymentError {
   override readonly name = 'CyberSourceError';

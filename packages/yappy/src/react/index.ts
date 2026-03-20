@@ -1,14 +1,14 @@
 /**
- * @module @panama-payments/yappy/react
+ * @module @devhubpty/yappy/react
  * @description React hooks and components for Yappy payment integration.
  *
  * Import from this subpath in React / Next.js client code:
  * ```typescript
- * import { useYappyWebComponent, YappyButton } from '@panama-payments/yappy/react';
+ * import { useYappyWebComponent, YappyButton } from '@devhubpty/yappy/react';
  * ```
  *
  * This module does NOT export server-side utilities (YappyClient, webhook validators).
- * For server-side code, use `@panama-payments/yappy/server`.
+ * For server-side code, use `@devhubpty/yappy/server`.
  */
 
 // Hooks

@@ -15,7 +15,7 @@
  *
  * @example
  * ```tsx
- * import { useThreeDS } from '@panama-payments/cybersource/react';
+ * import { useThreeDS } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const threeDS = useThreeDS({

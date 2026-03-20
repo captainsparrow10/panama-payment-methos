@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { usePayment } from '@panama-payments/cybersource/react';
+ * import { usePayment } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const { pay, result, isLoading, error, reset } = usePayment({

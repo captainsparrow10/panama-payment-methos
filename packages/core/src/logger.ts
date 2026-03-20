@@ -16,7 +16,7 @@
  * new YappyClient({ ..., logger: pino() });
  *
  * // With built-in console logger
- * import { createConsoleLogger } from '@panama-payments/core';
+ * import { createConsoleLogger } from '@devhubpty/core';
  * new CyberSourceClient({ ..., logger: createConsoleLogger({ level: 'debug' }) });
  * ```
  */

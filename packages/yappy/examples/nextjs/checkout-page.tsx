@@ -16,7 +16,7 @@ import {
   useYappyPendingCheck,
   YappyPhoneInput,
   YappyPendingModal,
-} from '@panama-payments/yappy/react';
+} from '@devhubpty/yappy/react';
 
 interface CheckoutPageProps {
   cartTotal: string;

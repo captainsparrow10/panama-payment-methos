@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **@panama-payments/core** — Shared utilities:
+- **@devhubpty/core** — Shared utilities:
   - `PaymentError` hierarchy with 7 subclasses (ValidationError, AuthenticationError, DeclinedError, TimeoutError, RateLimitError, ConfigError, NetworkError)
   - `withRetry()` with exponential backoff + jitter
   - `PaymentLogger` interface compatible with Winston, Pino, console
@@ -20,14 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `createSpan()` for optional OpenTelemetry tracing
   - `TEST_CARDS`, `generateTestOrderId()`, `generateTestWebhookPayload()` for testing
 
-- **@panama-payments/cmf** — CMF financing SDK:
+- **@devhubpty/cmf** — CMF financing SDK:
   - `CMFClient` with full API coverage (login, customer lookup, quotas, purchases, OTP, verification)
   - 4 headless React hooks (useCMFCustomer, useCMFQuotas, useCMFOtp, useCMFPayment)
   - `CMFError` with `statusResult` for CMF-specific error handling
   - Express and Next.js examples
   - 4 Mermaid flow diagrams
 
-- **@panama-payments/yappy** — Yappy mobile payment SDK:
+- **@devhubpty/yappy** — Yappy mobile payment SDK:
   - `YappyClient` with `validateMerchant()`, `createOrder()`, `initiatePayment()`
   - `validateYappyHash()` with timing-safe HMAC-SHA256 verification
   - `generateTestWebhook()` for testing webhook handlers
@@ -35,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Express and Next.js examples
   - 4 Mermaid flow diagrams (official CDN + custom polling approaches)
 
-- **@panama-payments/cybersource** — CyberSource 3DS payment SDK:
+- **@devhubpty/cybersource** — CyberSource 3DS payment SDK:
   - `CyberSourceClient` with 3DS authentication, card tokenization, vault, payments, refunds, voids
   - `InMemoryThreeDSAuthCache` with 5-minute TTL for frictionless 3DS fallback
   - `useThreeDS` orchestrator hook (state machine: setup → enroll → challenge? → validate → ready)

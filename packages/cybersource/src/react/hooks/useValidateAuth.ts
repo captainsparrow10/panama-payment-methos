@@ -7,7 +7,7 @@
  *
  * @example
  * ```tsx
- * import { useValidateAuth } from '@panama-payments/cybersource/react';
+ * import { useValidateAuth } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const { validate, data, isLoading, error, reset } = useValidateAuth({

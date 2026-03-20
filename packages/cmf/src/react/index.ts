@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/cmf/react
+ * @module @devhubpty/cmf/react
  *
  * React entry point for the CMF SDK.
  *
@@ -16,7 +16,7 @@
  *   CMFPaymentForm,
  *   CMFDocumentType,
  *   CMFOtpChannel,
- * } from '@panama-payments/cmf/react';
+ * } from '@devhubpty/cmf/react';
  * ```
  */
 

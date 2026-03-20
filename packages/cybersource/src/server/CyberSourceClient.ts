@@ -14,8 +14,8 @@
  *
  * @example
  * ```ts
- * import { CyberSourceClient, CyberSourceEnvironment } from '@panama-payments/cybersource/server';
- * import { createConsoleLogger } from '@panama-payments/core';
+ * import { CyberSourceClient, CyberSourceEnvironment } from '@devhubpty/cybersource/server';
+ * import { createConsoleLogger } from '@devhubpty/core';
  *
  * const client = new CyberSourceClient({
  *   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,
@@ -50,7 +50,7 @@ import {
   noopLogger,
   sanitize,
   withRetry,
-} from '@panama-payments/core';
+} from '@devhubpty/core';
 import { CyberSourceError } from '../errors.js';
 import { InMemoryThreeDSAuthCache } from './auth-cache.js';
 import { promisifySdkCall } from './promisify.js';
@@ -171,7 +171,7 @@ export class CyberSourceClient {
    *
    * @example
    * ```ts
-   * import { CyberSourceClient, CyberSourceEnvironment } from '@panama-payments/cybersource/server';
+   * import { CyberSourceClient, CyberSourceEnvironment } from '@devhubpty/cybersource/server';
    *
    * const client = new CyberSourceClient({
    *   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,

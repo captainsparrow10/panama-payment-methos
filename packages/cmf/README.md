@@ -1,4 +1,4 @@
-# @panama-payments/cmf
+# @devhubpty/cmf
 
 SDK for CMF (Banco General / CM Financiera / HNL) financing integration in Panama.
 
@@ -23,7 +23,7 @@ Provides a server-side client for the CMF API and React hooks/components for bui
 ## Installation
 
 ```bash
-pnpm add @panama-payments/cmf @panama-payments/core
+pnpm add @devhubpty/cmf @devhubpty/core
 ```
 
 ## Quick Start
@@ -31,7 +31,7 @@ pnpm add @panama-payments/cmf @panama-payments/core
 ### Server-side
 
 ```ts
-import { CMFClient, CMFDocumentType } from '@panama-payments/cmf/server';
+import { CMFClient, CMFDocumentType } from '@devhubpty/cmf/server';
 
 const cmf = new CMFClient({
   baseUrl: process.env.CMF_URL!,
@@ -51,7 +51,7 @@ const quotas = await cmf.getQuotas(products[0].customerProductId, 500);
 ### React (frontend)
 
 ```tsx
-import { CMFPaymentForm } from '@panama-payments/cmf/react';
+import { CMFPaymentForm } from '@devhubpty/cmf/react';
 
 <CMFPaymentForm
   total={150.00}
@@ -66,8 +66,8 @@ import { CMFPaymentForm } from '@panama-payments/cmf/react';
 
 | Entry Point | Usage | Description |
 |-------------|-------|-------------|
-| `@panama-payments/cmf/server` | Node.js only | `CMFClient`, types, enums, `CMFError` |
-| `@panama-payments/cmf/react` | Browser + SSR | Hooks, `CMFPaymentForm`, types, enums |
+| `@devhubpty/cmf/server` | Node.js only | `CMFClient`, types, enums, `CMFError` |
+| `@devhubpty/cmf/react` | Browser + SSR | Hooks, `CMFPaymentForm`, types, enums |
 
 ## Documentation
 
@@ -92,8 +92,8 @@ import { CMFPaymentForm } from '@panama-payments/cmf/react';
 ## Error Handling
 
 ```ts
-import { CMFError } from '@panama-payments/cmf/server';
-import { TimeoutError, NetworkError } from '@panama-payments/core';
+import { CMFError } from '@devhubpty/cmf/server';
+import { TimeoutError, NetworkError } from '@devhubpty/core';
 
 try {
   await cmf.processPurchaseInQuotas(params);

@@ -1,5 +1,5 @@
 /**
- * @module @panama-payments/yappy/types
+ * @module @devhubpty/yappy/types
  * @description Core TypeScript types and enums for the Yappy SDK.
  * All types are derived from the official Banco General Yappy API documentation.
  */
@@ -61,7 +61,7 @@ export enum YappyButtonTheme {
  *
  * @example
  * ```ts
- * import { YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@panama-payments/yappy/server';
+ * import { YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@devhubpty/yappy/server';
  *
  * const message = YAPPY_ERROR_MESSAGES[YappyErrorCode.E005];
  * // => 'Este numero no esta registrado en Yappy.'
@@ -96,7 +96,7 @@ export enum YappyErrorCode {
  *
  * @example
  * ```ts
- * import { YAPPY_ERROR_MESSAGES, YappyErrorCode } from '@panama-payments/yappy/server';
+ * import { YAPPY_ERROR_MESSAGES, YappyErrorCode } from '@devhubpty/yappy/server';
  *
  * const message = YAPPY_ERROR_MESSAGES[code] ?? 'Error desconocido. Intenta nuevamente.';
  * ```
@@ -348,7 +348,7 @@ export interface YappyWebhookResult {
  *
  * @example
  * ```ts
- * import { YappyClient } from '@panama-payments/yappy/server';
+ * import { YappyClient } from '@devhubpty/yappy/server';
  *
  * const client = new YappyClient({
  *   merchantId: process.env.YAPPY_MERCHANT_ID!,

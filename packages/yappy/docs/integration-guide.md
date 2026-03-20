@@ -1,6 +1,6 @@
 # Integration Guide
 
-Complete guide for integrating Yappy payments into your application using `@panama-payments/yappy`.
+Complete guide for integrating Yappy payments into your application using `@devhubpty/yappy`.
 
 ## Table of Contents
 
@@ -36,8 +36,8 @@ All approaches share the same server-side setup. Your backend needs:
 
 ```typescript
 // server.ts
-import { YappyClient } from '@panama-payments/yappy/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { YappyClient } from '@devhubpty/yappy/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 export const yappy = new YappyClient(
   {
@@ -61,7 +61,7 @@ export const yappy = new YappyClient(
 ```tsx
 'use client';
 
-import { YappyButton } from '@panama-payments/yappy/react';
+import { YappyButton } from '@devhubpty/yappy/react';
 
 export function CheckoutPage() {
   return (
@@ -91,7 +91,7 @@ For more control over the button rendering:
 ```tsx
 'use client';
 
-import { useYappyWebComponent } from '@panama-payments/yappy/react';
+import { useYappyWebComponent } from '@devhubpty/yappy/react';
 
 export function CustomCheckout() {
   const { btnRef, isOnline, isLoading, isCdnLoaded } = useYappyWebComponent({
@@ -127,7 +127,7 @@ import {
   useYappyPendingCheck,
   YappyPhoneInput,
   YappyPendingModal,
-} from '@panama-payments/yappy/react';
+} from '@devhubpty/yappy/react';
 
 export function CustomYappyCheckout({ total }: { total: string }) {
   const {
@@ -177,7 +177,7 @@ export function CustomYappyCheckout({ total }: { total: string }) {
 ### Step-by-step with separate hooks
 
 ```tsx
-import { useYappyCheckout, useYappyOrderStatus } from '@panama-payments/yappy/react';
+import { useYappyCheckout, useYappyOrderStatus } from '@devhubpty/yappy/react';
 
 function StepByStepCheckout() {
   const checkout = useYappyCheckout({ checkoutEndpoint: '/api/yappy/checkout' });
@@ -200,7 +200,7 @@ function StepByStepCheckout() {
 For Vue, Svelte, Angular, or plain HTML projects:
 
 ```typescript
-import { initYappyButton } from '@panama-payments/yappy/vanilla';
+import { initYappyButton } from '@devhubpty/yappy/vanilla';
 
 const container = document.getElementById('yappy-container')!;
 
@@ -236,7 +236,7 @@ Your webhook endpoint receives GET requests from Yappy with payment results.
 ### Express.js
 
 ```typescript
-import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
 
 app.get('/api/yappy/webhook', async (req, res) => {
   const result = validateYappyHash(
@@ -267,7 +267,7 @@ app.get('/api/yappy/webhook', async (req, res) => {
 
 ```typescript
 import { NextRequest, NextResponse } from 'next/server';
-import { validateYappyHash, YappyStatus } from '@panama-payments/yappy/server';
+import { validateYappyHash, YappyStatus } from '@devhubpty/yappy/server';
 
 export async function GET(request: NextRequest) {
   const query: Record<string, string> = {};
@@ -295,7 +295,7 @@ import {
   generateTestWebhook,
   validateYappyHash,
   YappyStatus,
-} from '@panama-payments/yappy/server';
+} from '@devhubpty/yappy/server';
 
 const secretKey = process.env.CLAVE_SECRETA!;
 
@@ -352,11 +352,11 @@ The `YappyButton` component includes this declaration automatically.
 
 ## Error handling
 
-All server-side errors are instances of `YappyError`, which extends `PaymentError` from `@panama-payments/core`:
+All server-side errors are instances of `YappyError`, which extends `PaymentError` from `@devhubpty/core`:
 
 ```typescript
-import { YappyError, YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@panama-payments/yappy/server';
-import { PaymentError } from '@panama-payments/core';
+import { YappyError, YappyErrorCode, YAPPY_ERROR_MESSAGES } from '@devhubpty/yappy/server';
+import { PaymentError } from '@devhubpty/core';
 
 try {
   await yappy.initCheckout({ ... });

@@ -1,4 +1,4 @@
-# Getting Started with @panama-payments/yappy
+# Getting Started with @devhubpty/yappy
 
 This guide walks you through setting up Yappy payments in your application, from obtaining credentials to processing your first payment.
 
@@ -39,13 +39,13 @@ You will also get access to:
 
 ```bash
 # npm
-npm install @panama-payments/yappy @panama-payments/core
+npm install @devhubpty/yappy @devhubpty/core
 
 # pnpm (monorepo)
-pnpm add @panama-payments/yappy @panama-payments/core
+pnpm add @devhubpty/yappy @devhubpty/core
 
 # bun
-bun add @panama-payments/yappy @panama-payments/core
+bun add @devhubpty/yappy @devhubpty/core
 ```
 
 ## Step 5: Configure environment variables
@@ -66,8 +66,8 @@ BASE_URL=https://api.yourdomain.com  # Your backend URL for webhooks
 ## Step 6: Set up the server
 
 ```typescript
-import { YappyClient } from '@panama-payments/yappy/server';
-import { createConsoleLogger } from '@panama-payments/core';
+import { YappyClient } from '@devhubpty/yappy/server';
+import { createConsoleLogger } from '@devhubpty/core';
 
 const yappy = new YappyClient(
   {
@@ -108,7 +108,7 @@ console.log('Order created:', result.orderId);
 ### Client-side (React)
 
 ```tsx
-import { YappyButton } from '@panama-payments/yappy/react';
+import { YappyButton } from '@devhubpty/yappy/react';
 
 <YappyButton
   checkoutEndpoint="/api/yappy/checkout"

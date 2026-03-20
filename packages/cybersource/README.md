@@ -1,4 +1,4 @@
-# @panama-payments/cybersource
+# @devhubpty/cybersource
 
 SDK for CyberSource 3DS payment integration with card tokenization, vaulting, and payment processing.
 
@@ -9,7 +9,7 @@ payments, refunds, and voids.
 ## Installation
 
 ```bash
-pnpm add @panama-payments/cybersource @panama-payments/core
+pnpm add @devhubpty/cybersource @devhubpty/core
 ```
 
 ## Quick Start
@@ -20,7 +20,7 @@ pnpm add @panama-payments/cybersource @panama-payments/core
 import {
   CyberSourceClient,
   CyberSourceEnvironment,
-} from '@panama-payments/cybersource/server';
+} from '@devhubpty/cybersource/server';
 
 const client = new CyberSourceClient({
   merchantId: process.env.CYBERSOURCE_MERCHANT_ID!,
@@ -48,7 +48,7 @@ const payment = await client.processPayment({ totalAmount: '25.99', currency: 'U
 ### React (Browser)
 
 ```tsx
-import { useThreeDS, ThreeDSModal, ThreeDSStep } from '@panama-payments/cybersource/react';
+import { useThreeDS, ThreeDSModal, ThreeDSStep } from '@devhubpty/cybersource/react';
 
 function Checkout() {
   const threeDS = useThreeDS({
@@ -82,8 +82,8 @@ function Checkout() {
 
 | Import | Environment | Description |
 |--------|-------------|-------------|
-| `@panama-payments/cybersource/server` | Node.js | `CyberSourceClient`, cache, promisify, types |
-| `@panama-payments/cybersource/react` | Browser | Hooks, `ThreeDSModal`, types |
+| `@devhubpty/cybersource/server` | Node.js | `CyberSourceClient`, cache, promisify, types |
+| `@devhubpty/cybersource/react` | Browser | Hooks, `ThreeDSModal`, types |
 
 ## Documentation
 

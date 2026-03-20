@@ -1,15 +1,15 @@
 # API Reference
 
-Complete reference for all exports from `@panama-payments/yappy`.
+Complete reference for all exports from `@devhubpty/yappy`.
 
-## Server (`@panama-payments/yappy/server`)
+## Server (`@devhubpty/yappy/server`)
 
 ### YappyClient
 
 The main server-side client for interacting with the Yappy API.
 
 ```typescript
-import { YappyClient } from '@panama-payments/yappy/server';
+import { YappyClient } from '@devhubpty/yappy/server';
 ```
 
 #### Constructor
@@ -74,7 +74,7 @@ import {
   validateYappyHash,
   parseYappyWebhook,
   generateTestWebhook,
-} from '@panama-payments/yappy/server';
+} from '@devhubpty/yappy/server';
 ```
 
 #### `validateYappyHash(query, secretKey): YappyWebhookResult`
@@ -116,10 +116,10 @@ Returns a random 15-character uppercase alphanumeric string.
 ### YappyError
 
 ```typescript
-import { YappyError } from '@panama-payments/yappy/server';
+import { YappyError } from '@devhubpty/yappy/server';
 ```
 
-Extends `PaymentError` from `@panama-payments/core`.
+Extends `PaymentError` from `@devhubpty/core`.
 
 | Property | Type | Description |
 |----------|------|-------------|
@@ -130,7 +130,7 @@ Extends `PaymentError` from `@panama-payments/core`.
 
 ---
 
-## React (`@panama-payments/yappy/react`)
+## React (`@devhubpty/yappy/react`)
 
 ### Hooks
 
@@ -180,7 +180,7 @@ Validates a Panamanian phone number (8 digits, starts with 6 or 7).
 
 ---
 
-## Vanilla (`@panama-payments/yappy/vanilla`)
+## Vanilla (`@devhubpty/yappy/vanilla`)
 
 #### `initYappyButton(container, options): () => void`
 

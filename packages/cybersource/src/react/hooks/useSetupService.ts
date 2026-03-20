@@ -7,7 +7,7 @@
  *
  * @example
  * ```tsx
- * import { useSetupService } from '@panama-payments/cybersource/react';
+ * import { useSetupService } from '@devhubpty/cybersource/react';
  *
  * function CheckoutPage() {
  *   const { setup, data, isLoading, error, reset } = useSetupService({

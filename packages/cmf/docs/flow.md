@@ -251,8 +251,8 @@ All flows should handle errors at each step. The SDK provides typed errors:
 | `NetworkError` | DNS failure, connection refused, 5xx | Yes |
 
 ```ts
-import { CMFError } from '@panama-payments/cmf/server';
-import { AuthenticationError, TimeoutError, NetworkError } from '@panama-payments/core';
+import { CMFError } from '@devhubpty/cmf/server';
+import { AuthenticationError, TimeoutError, NetworkError } from '@devhubpty/core';
 
 try {
   await cmf.processPurchaseInQuotas(params);

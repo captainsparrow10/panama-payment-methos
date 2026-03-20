@@ -1,12 +1,12 @@
 /**
- * @module @panama-payments/cmf/server
+ * @module @devhubpty/cmf/server
  *
  * Server-side entry point for the CMF SDK.
  *
  * Provides the `CMFClient` for server-side API interaction, all types,
  * enums, and error classes needed to integrate CMF financing into your backend.
  *
- * **IMPORTANT**: Only import from `@panama-payments/cmf/server` in Node.js code.
+ * **IMPORTANT**: Only import from `@devhubpty/cmf/server` in Node.js code.
  * Never use this in browser/client code -- merchant credentials must stay server-side.
  *
  * @example
@@ -15,7 +15,7 @@
  *   CMFClient,
  *   CMFDocumentType,
  *   CMFError,
- * } from '@panama-payments/cmf/server';
+ * } from '@devhubpty/cmf/server';
  *
  * const cmf = new CMFClient({
  *   baseUrl: process.env.CMF_URL!,

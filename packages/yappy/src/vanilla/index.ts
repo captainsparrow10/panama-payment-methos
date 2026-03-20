@@ -1,10 +1,10 @@
 /**
- * @module @panama-payments/yappy/vanilla
+ * @module @devhubpty/yappy/vanilla
  * @description Vanilla JS entry point for the Yappy SDK.
  *
  * Import from this subpath in non-React projects:
  * ```typescript
- * import { initYappyButton } from '@panama-payments/yappy/vanilla';
+ * import { initYappyButton } from '@devhubpty/yappy/vanilla';
  * ```
  */
 

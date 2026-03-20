@@ -80,7 +80,7 @@ export interface UseCMFCustomerReturn {
  *
  * @example
  * ```tsx
- * import { useCMFCustomer, CMFDocumentType } from '@panama-payments/cmf/react';
+ * import { useCMFCustomer, CMFDocumentType } from '@devhubpty/cmf/react';
  *
  * function CustomerSearch() {
  *   const { search, customer, products, isLoading, error } = useCMFCustomer();

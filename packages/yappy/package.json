@@ -1,0 +1,35 @@
+{
+  "name": "@panama-payments/yappy",
+  "version": "0.1.0",
+  "description": "SDK for Yappy (Banco General) mobile payment integration in Panama",
+  "license": "MIT",
+  "contributors": [
+    { "name": "captainsparrow10", "url": "https://github.com/captainsparrow10" },
+    { "name": "Reddsito", "url": "https://github.com/Reddsito" }
+  ],
+  "exports": {
+    "./server": { "import": "./dist/server/index.js", "types": "./dist/server/index.d.ts" },
+    "./react": { "import": "./dist/react/index.js", "types": "./dist/react/index.d.ts" },
+    "./vanilla": { "import": "./dist/vanilla/index.js", "types": "./dist/vanilla/index.d.ts" }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@panama-payments/core": "workspace:*",
+    "axios": "^1.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "typescript": "^5.8.0"
+  }
+}

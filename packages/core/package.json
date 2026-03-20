@@ -1,0 +1,35 @@
+{
+  "name": "@panama-payments/core",
+  "version": "0.1.0",
+  "description": "Shared utilities for Panama payment SDKs — errors, retry, logging, PCI redaction, testing",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "captainsparrow10",
+      "url": "https://github.com/captainsparrow10"
+    },
+    {
+      "name": "Reddsito",
+      "url": "https://github.com/Reddsito"
+    }
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.8.0"
+  }
+}

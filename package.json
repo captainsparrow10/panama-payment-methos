@@ -1,0 +1,28 @@
+{
+  "name": "panama-payment-methos",
+  "private": true,
+  "description": "Open-source SDKs for Panamanian payment methods (CMF, Yappy, CyberSource)",
+  "contributors": [
+    {
+      "name": "captainsparrow10",
+      "url": "https://github.com/captainsparrow10"
+    },
+    {
+      "name": "Reddsito",
+      "url": "https://github.com/Reddsito"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r exec rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
